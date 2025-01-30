@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
-import { NavController } from '@ionic/angular';
+import { IonInputPasswordToggle, NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 @Component({
   selector: 'app-login',
@@ -15,7 +15,11 @@ export class LoginPage implements OnInit {
   formErrors = {
     email: [
       { type: 'required', message: 'El correo es obligatorio' },
-      { type: 'email', message: 'El correo no es valido' }
+      { type: 'email', message: 'Correo no valido' }
+    ],
+    password: [
+      { type: 'required', message: 'La contraseña es obligatoria' },
+      { type: 'minlength', message: 'La contraseña debe tener al menos 6 caracteres' }
     ]
   }
   constructor(
