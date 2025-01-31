@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Login</ion-title>
+   
   </ion-toolbar>
 </ion-header>
 
@@ -23,6 +24,7 @@
       </ion-label>
       </ng-container>
     </div>
+
     <ion-item>
       <ion-input label="Contraseña" labelPlacement="floating" placeholder="**********" formControlName="password" type="password"></ion-input>
     </ion-item>
@@ -34,11 +36,16 @@
       </ion-label>
       </ng-container>
     </div>
-    <ion-button
+
+    
+
+    <ion-button     
     type="submit"
     [disabled]="!loginForm.valid"
     >Login</ion-button>
+
     <ion-button
+    
     type="submit"
     
     >Registro</ion-button>
