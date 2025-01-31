@@ -61,14 +61,7 @@
     <ion-item>
       <ion-input label="ConfirmPassword" labelPlacement="floating" placeholder="**********" formControlName="confirmPassword" type="password"></ion-input>
     </ion-item>
-    <div>
-      <ng-container *ngFor="let error of formErrors.confirmPassword">
-        <ion-label color="danger" 
-        *ngIf="(registerForm.get('confirmPassword')?.hasError(error.type) && registerForm.get('confirmPassword')?.dirty)">
-        {{ error.message }}
-      </ion-label>
-      </ng-container>
-    </div>
+  
     
 
     
