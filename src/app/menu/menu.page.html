@@ -11,9 +11,25 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
+     
+      <ion-item>
+        <ion-button
+        [routerLink]="['/menu/home']"><ion-icon name="home-outline"></ion-icon> Go  to  Home </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button
+        [routerLink]="['/menu/account']"><ion-icon name="person-circle-outline"></ion-icon> Go  to  Account </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-button [routerLink]="['/menu/search-users']"><ion-icon name="eye-outline"></ion-icon> Go to Search Users </ion-button>
+      </ion-item>
+
       <ion-item (click)="log_out()">
         <ion-icon name="log-out-outline"></ion-icon> Salir
       </ion-item>
+
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="content"></ion-router-outlet>
