@@ -1,4 +1,4 @@
-<ion-header >
+<ion-header color="danger" >
   <ion-toolbar>
     <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
@@ -12,6 +12,8 @@
     <img [src]="user_data.image ? user_data.image : 'assets/images/default-avatar.jpeg'"/>
   </ion-avatar>
   <p>usuario: {{user_data.username}}</p>
-  <p>Seguidores: {{user_data.followed_users.length}}</p>
-  <p>Siguiendo: {{user_data.following_users.length}}</p>
+  <p>Siguiendo: {{user_data.followees.length}}</p>
+  <p>Seguidores: {{user_data.followers.length}}</p>
+
+  <ion-button [routerLink]="['/menu/update-info']">Go to Update </ion-button>
 </ion-content>

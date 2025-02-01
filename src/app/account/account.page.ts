@@ -15,8 +15,8 @@ export class AccountPage implements OnInit {
     name: '',
     email: '',
     image: '',
-    followed_users: [],
-    following_users: []
+    followees: [],
+    followers: []
   };
   constructor(
     private userService: UserService,

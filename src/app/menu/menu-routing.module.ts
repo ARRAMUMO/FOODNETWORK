@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { MenuPage } from './menu.page';
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: "account",
         loadChildren: () => import("../account/account.module").then(m => m.AccountPageModule)
+      },
+      {
+        path: 'update-info',
+        loadChildren: () => import('../update-info/update-info.module').then( m => m.UpdateInfoPageModule)
       },
       {
         path: 'search-users',
