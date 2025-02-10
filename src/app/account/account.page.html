@@ -15,5 +15,25 @@
   <p>Siguiendo: {{user_data.followees.length}}</p>
   <p>Seguidores: {{user_data.followers.length}}</p>
 
-  <ion-button [routerLink]="['/menu/update-info']">Go to Update </ion-button>
+
+  <div>
+    <h2>Data update</h2>
+    
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="user_data.name" />
+    <label>Last name:</label>
+    <input type="text" [(ngModel)]="user_data.last_name" />
+    <label>User Name:</label>
+    <input type="text" [(ngModel)]="user_data.username" />
+  
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="user_data.email" />
+  
+    <button (click)="update()">Update User </button>
+  </div>
+
+ 
+  
+
+
 </ion-content>
